@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>VERTEX APPLICATIONS 🪽</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;color:#171717;background:#fff}
+header{height:76px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #eee}
+.brand{font-size:19px;font-weight:900;letter-spacing:2px}
+.brand span{color:#888}
+header a{color:#171717;text-decoration:none;font-weight:bold}
+.hero{max-width:1100px;margin:auto;padding:85px 25px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:35px}
+.tag{font-size:11px;letter-spacing:3px;color:#888;font-weight:bold}
+h1{font-size:clamp(40px,6vw,65px);letter-spacing:-3px;line-height:1.05;margin:20px 0}
+h1 span{color:#888}
+p{color:#777;line-height:1.7}
+.btn{display:inline-block;background:#171717;color:white;text-decoration:none;border:0;border-radius:8px;padding:15px 22px;font-weight:bold;cursor:pointer;margin-top:15px}
+.art{background:#f5f5f5;border:1px solid #eee;border-radius:25px;padding:55px;text-align:center}
+.logo{font-size:85px;font-weight:900;letter-spacing:-8px}
+.logo small{display:block;font-size:13px;letter-spacing:5px;color:#888}
+.stats{display:flex;justify-content:center;gap:70px;padding:28px 15px;border-block:1px solid #eee;text-align:center}
+.stats strong,.stats span{display:block}
+.stats span{font-size:12px;color:#888;margin-top:6px}
+section.content{max-width:1100px;margin:auto;padding:75px 20px}
+.heading{text-align:center;margin-bottom:35px}
+h2{font-size:36px;letter-spacing:-1px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.plan{border:1px solid #e5e5e5;border-radius:15px;padding:27px}
+.plan.featured{border:2px solid #171717}
+.plan h3{font-size:22px}
+.price{font-size:34px;font-weight:900;margin:18px 0}
+.plan button{width:100%;background:#171717;color:white;border:0;border-radius:8px;padding:14px;cursor:pointer;font-weight:bold;margin-top:15px}
+.pix{max-width:550px;margin:auto;text-align:center;padding:25px;border:1px solid #eee;border-radius:15px;background:#fafafa}
+.pix code{display:block;overflow-wrap:anywhere;font-weight:bold;margin:20px 0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.steps article{border-top:1px solid #ddd;padding-top:15px}
+.steps b{color:#999}
+.cta{margin:20px auto 70px;max-width:1060px;background:#f5f5f5;border-radius:18px;padding:35px;display:flex;justify-content:space-between;align-items:center}
+footer{border-top:1px solid #eee;padding:25px;text-align:center;color:#888;font-size:12px}
+dialog{border:0;border-radius:16px;padding:28px;width:min(90%,420px);box-shadow:0 10px 60px #0003}
+dialog::backdrop{background:#0008}
+dialog input{width:100%;padding:13px;border:1px solid #ddd;border-radius:8px;margin:8px 0 15px}
+.close{float:right;border:0;background:none;font-size:25px;cursor:pointer}
+#message{font-size:12px;color:#777}
+@media(max-width:700px){
+.hero{grid-template-columns:1fr;padding:55px 22px}
+.art{padding:35px}
+.plans{grid-template-columns:1fr}
+.steps{grid-template-columns:1fr 1fr}
+.stats{gap:20px}
+.cta{margin:15px;display:block}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">VERTEX <span>APPLICATIONS</span> 🪽</div>
+  <a href="#planos">Ver planos ↗</a>
+</header>
+<main>
+<section class="hero">
+  <div>
+    <span class="tag">HOSPEDAGEM PARA DISCORD</span>
+    <h1>Seu bot online.<br><span>Sua comunidade ativa.</span></h1>
+    <p>Hospedagem de aplicações Discord com planos simples e gerenciamento organizado.</p>
+    <a class="btn" href="#planos">ESCOLHER HOSPEDAGEM →</a>
+  </div>
+  <div class="art"><div class="logo">VX<small>APPLICATIONS</small></div></div>
+</section>
+<div class="stats">
+  <div><strong>24/7*</strong><span>Objetivo de disponibilidade</span></div>
+  <div><strong>3 planos</strong><span>Escolha sua duração</span></div>
+  <div><strong>Discord</strong><span>Foco em aplicações</span></div>
+</div>
+<section class="content" id="planos">
+  <div class="heading"><span class="tag">PLANOS DE HOSPEDAGEM</span><h2>Escolha seu plano</h2><p>Selecione a duração ideal para sua aplicação.</p></div>
+  <div class="plans">
+    <article class="plan"><span class="tag">30 DIAS</span><h3>Mensal</h3><div class="price">R$ 4,00</div><p>Hospedagem por 30 dias.</p><button onclick="escolher('Mensal','R$ 4,00')">Contratar plano →</button></article>
+    <article class="plan featured"><span class="tag">90 DIAS · MAIS ESCOLHIDO</span><h3>Trimestral</h3><div class="price">R$ 10,00</div><p>Hospedagem por 90 dias.</p><button onclick="escolher('Trimestral','R$ 10,00')">Contratar plano →</button></article>
+    <article class="plan"><span class="tag">365 DIAS</span><h3>Anual</h3><div class="price">R$ 30,00</div><p>Hospedagem por 365 dias.</p><button onclick="escolher('Anual','R$ 30,00')">Contratar plano →</button></article>
+  </div>
+</section>
+<section class="content" id="pix">
+  <div class="heading"><span class="tag">PAGAMENTO VIA PIX</span><h2>Chave PIX</h2><p>Confira o valor do plano antes de realizar o pagamento.</p></div>
+  <div class="pix"><span class="tag">CHAVE PIX ALEATÓRIA</span><code id="pixkey">7046dfa9-08c5-478b-9dd9-8ab07014062c</code><button class="btn" onclick="copiarPix()">COPIAR CHAVE PIX</button><p id="pixmsg"></p></div>
+</section>
+<section class="content">
+  <div class="heading"><span class="tag">SIMPLES E ORGANIZADO</span><h2>Como funciona</h2></div>
+  <div class="steps">
+    <article><b>01</b><h3>Escolha seu plano</h3><p>Selecione a duração.</p></article>
+    <article><b>02</b><h3>Faça seu pedido</h3><p>Informe seus dados de contato.</p></article>
+    <article><b>03</b><h3>Confirmação</h3><p>O pagamento precisa ser verificado.</p></article>
+    <article><b>04</b><h3>Ativação</h3><p>A hospedagem será configurada após a confirmação.</p></article>
+  </div>
+</section>
+<div class="cta"><div><span class="tag">VERTEX APPLICATIONS 🪽</span><h2>Pronto para hospedar seu bot?</h2><p>Escolha seu plano e comece.</p></div><a class="btn" href="#planos">VER PLANOS →</a></div>
+</main>
+<footer>© <span id="ano"></span> VERTEX APPLICATIONS. Todos os direitos reservados.</footer>
+<dialog id="pedido">
+  <button class="close" onclick="document.getElementById('pedido').close()">×</button>
+  <span class="tag">SEU PEDIDO</span><h2 id="nomeplano">Plano</h2><h3 id="valorplano"></h3>
+  <p>Para continuar, faça o pagamento pela chave PIX exibida na página. Depois, entre em contato com o suporte para confirmar seu pedido.</p>
+  <button class="btn" onclick="document.getElementById('pedido').close()">ENTENDI</button>
+</dialog>
+<script>
+document.getElementById("ano").textContent=new Date().getFullYear();
+function escolher(nome,valor){
+  document.getElementById("nomeplano").textContent="Plano "+nome;
+  document.getElementById("valorplano").textContent=valor;
+  document.getElementById("pedido").showModal();
+}
+async function copiarPix(){
+  const chave=document.getElementById("pixkey").textContent;
+  const msg=document.getElementById("pixmsg");
+  try{await navigator.clipboard.writeText(chave);msg.textContent="Chave PIX copiada!";}
+  catch(e){msg.textContent="Selecione e copie a chave manualmente.";}
+}
+</script>
+</body>
+</html>
